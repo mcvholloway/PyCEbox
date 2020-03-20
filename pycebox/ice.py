@@ -127,7 +127,7 @@ def ice_plot(ice_data, frac_to_plot=1.,
 
     if frac_to_plot < 1.:
         n_cols = ice_data.shape[1]
-        icols = np.random.choice(n_cols, size=frac_to_plot * n_cols, replace=False)
+        icols = np.random.choice(n_cols, size=int(frac_to_plot * n_cols), replace=False)
         plot_ice_data = ice_data.iloc[:, icols]
     else:
         plot_ice_data = ice_data
